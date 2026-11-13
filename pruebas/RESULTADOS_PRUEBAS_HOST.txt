@@ -1,0 +1,11 @@
+VERIFICACION DE SOFTWARE EN HOST - 2026-11-13
+
+Ejecutado: python pruebas/test_estatico.py
+[OK] Protocolo ESP-NOW: 12 bytes, magic/seq: gcc -std=c11 -Wall -Wextra -Werror
+[OK] Clasificador compilado con GCC nativo: 915/915 muestras
+[OK] LDA por rondas: 1=100%, 2=100%, 3=100%
+[OK] API HTTP Edge: POST telemetria, GET datos, escritura JSONL
+
+NOTA: Solo pruebas de computadora Linux del servidor y logica de IA.
+No se ha compilado el firmware con ESP-IDF 6.1 ni se ha probado fisicamente
+LCD, ESP-NOW, OTA o conectividad Wi-Fi entre placas.

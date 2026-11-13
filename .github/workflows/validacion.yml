@@ -1,0 +1,18 @@
+name: Verificacion de modelos y servidor edge
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  pruebas-host:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Dependencias de entrenamiento
+        run: python -m pip install -r datos_ia/requirements.txt
+      - name: Verificar modelo, protocolo y API
+        run: python pruebas/test_estatico.py

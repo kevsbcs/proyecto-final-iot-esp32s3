@@ -1,0 +1,57 @@
+PROYECTO IOT ESP32-S3 - REPORTE DE CLASIFICACION DE GESTOS
+Algoritmo: analisis discriminante lineal (LDA), supervisado.
+Entradas: ax, ay, az [g] - QMI8658.
+Total de muestras: 915
+Las etiquetas describen gestos fisicos, no necesariamente signos de los ejes.
+
+Distribucion por ronda y etiqueta:
+ronda  etiqueta
+1      REPOSO      61
+       X_NEG       61
+       X_POS       61
+       Y_NEG       61
+       Y_POS       61
+2      REPOSO      61
+       X_NEG       61
+       X_POS       61
+       Y_NEG       61
+       Y_POS       61
+3      REPOSO      61
+       X_NEG       61
+       X_POS       61
+       Y_NEG       61
+       Y_POS       61
+
+Ronda 1 reservada: 305 muestras, exactitud = 100.0000%
+Ronda 2 reservada: 305 muestras, exactitud = 100.0000%
+Ronda 3 reservada: 305 muestras, exactitud = 100.0000%
+
+Matriz de confusion - ronda 3, filas reales/columnas predichas:
+Clases: REPOSO, X_NEG, X_POS, Y_NEG, Y_POS
+[[61  0  0  0  0]
+ [ 0 61  0  0  0]
+ [ 0  0 61  0  0]
+ [ 0  0  0 61  0]
+ [ 0  0  0  0 61]]
+
+Validacion agrupada por rondas:
+Exactitud global: 100.0000%
+Exactitud media por ronda: 100.0000%
+
+Informe de clasificacion agrupada por ronda:
+              precision    recall  f1-score   support
+
+      REPOSO     1.0000    1.0000    1.0000       183
+       X_NEG     1.0000    1.0000    1.0000       183
+       X_POS     1.0000    1.0000    1.0000       183
+       Y_NEG     1.0000    1.0000    1.0000       183
+       Y_POS     1.0000    1.0000    1.0000       183
+
+    accuracy                         1.0000       915
+   macro avg     1.0000    1.0000    1.0000       915
+weighted avg     1.0000    1.0000    1.0000       915
+
+MODELO FINAL: reentrenado con las tres rondas completas.
+El 100% de exactitud observado NO garantiza rendimiento fuera de las poses capturadas.
+Pendiente validar inclinaciones intermedias, dinamicas y otros usuarios.
+Los comandos solo se muestran por terminal; ESP-NOW y OTA real estan pendientes.

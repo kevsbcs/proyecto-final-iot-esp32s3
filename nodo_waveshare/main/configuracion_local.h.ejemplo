@@ -1,0 +1,9 @@
+/**
+ * Copiar como configuracion_local.h y ajustar.
+ * Este archivo de ejemplo contiene valores ficticios.
+ * El archivo sin .ejemplo se excluye de Git mediante .gitignore.
+ */
+#define IOT_WIFI_SSID "MI_WIFI_2G"
+#define IOT_WIFI_PASS "MI_CLAVE_WIFI"
+#define IOT_EDGE_IP "192.168.1.100"
+/* Cuando hay AP, el canal real lo impone el router/hotspot. */

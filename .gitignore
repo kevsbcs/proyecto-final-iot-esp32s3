@@ -1,0 +1,24 @@
+# ESP-IDF
+**/build/
+**/sdkconfig
+**/sdkconfig.old
+**/managed_components/
+**/dependencies.lock
+**/.cache/
+**/.vscode/
+# Privacidad: no subir claves LAN ni firmware desplegable
+**/configuracion_local.h
+edge_server/telemetria.jsonl
+edge_server/firmware.bin
+# Python
+**/__pycache__/
+**/*.pyc
+**/.venv/
+# HTML generado por doxygen
+html/
+latex/
+.DS_Store
+Thumbs.db
+
+# Doxygen
+documentacion/doxygen_generado/
